@@ -21,7 +21,7 @@ class TestEngineerStation(unittest.TestCase):
 
     def test_repr(self):
         repr_output = repr(self.Engineer_station_instance)
-        self.assertEqual(repr_output, "NHLC Enterprise Engineer station")
+        self.assertEqual(repr_output, "NHLC Enterprise Engineer Station")
 
 
 if __name__ == '__main__':

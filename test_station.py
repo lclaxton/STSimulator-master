@@ -25,7 +25,7 @@ class TestStation(unittest.TestCase):
         self.assertEqual(str(cm.exception), 'Base Station name should be a string')
 
     def test_crew_members(self):
-        self.assertIsInstance(self.station_instance.crew_members, List)
+        self.assertEqual(type(self.station_instance.crew_members), list)
 
     def test_str(self):
         string_output = str(self.station_instance)

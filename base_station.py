@@ -11,7 +11,7 @@ class BaseStation:
         if type(name) is str:
             self.name: str = name
         else:
-            raise ValueError('Base Station name should be a string')
+            raise ValueError('Station name should be a string')
         self.crew_members: List = []
 
     def __str__(self):
@@ -19,3 +19,8 @@ class BaseStation:
 
     def __repr__(self):
         return "NHLC Enterprise base station"
+
+class MedicalStation(BaseStation):
+
+    def __init__(self,name: str):
+        super().__init__(name=name)

@@ -35,6 +35,11 @@ class TestEnterprise(unittest.TestCase):
         repr_output = repr(self.enterprise_instance)
         self.assertEqual(repr_output, "NHLC Enterprise")
 
+    def test_name_sad(self):
+        with self.assertRaises(ValueError) as cm:
+            broken_name_instance = Enterprise(1)
+        self.assertEqual(str(cm.exception), 'Enterprise name should be a string')
+
 
 if __name__ == '__main__':
     unittest.main()

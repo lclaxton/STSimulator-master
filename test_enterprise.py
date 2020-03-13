@@ -33,7 +33,7 @@ class TestEnterprise(unittest.TestCase)
 
         str_output = f.getvalue()
 
-        self.assertEqual(str_output, "Welcome to the Enterprise!\n")
+        self.assertEqual(str_output, "Welcome to the {}\n".format(self.enterprise_instance.name))
 
     def test_repr(self):
         f = io.StringIO()

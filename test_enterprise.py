@@ -3,7 +3,8 @@ from enterprise import Enterprise
 import io
 import contextlib
 
-class TestEnterprise(unittest.TestCase)
+
+class TestEnterprise(unittest.TestCase):
 
     def setUp(self):
         self.enterprise_instance = Enterprise("test_name")
@@ -27,22 +28,13 @@ class TestEnterprise(unittest.TestCase)
         self.assertEqual(self.enterprise_instance.shield_level, 100)
 
     def test_str(self):
-        f = io.StringIO()
-        with contextlib.redirect.stdout(f):
-            self.enterprise_instance.str()
-
-        str_output = f.getvalue()
-
-        self.assertEqual(str_output, "Welcome to the {}\n".format(self.enterprise_instance.name))
+        string_output = str(self.enterprise_instance)
+        self.assertEqual(string_output, "Welcome to the {}".format(self.enterprise_instance.name))
 
     def test_repr(self):
-        f = io.StringIO()
-        with contextlib.redirect.stdout(f):
-            self.enterprise_instance.str()
+        repr_output = repr(self.enterprise_instance)
+        self.assertEqual(repr_output, "NHLC Enterprise")
 
-        repr_output = f.getvalue()
-
-        self.assertEqual(repr_output, "NHLC Enterprise\n")
 
 if __name__ == '__main__':
     unittest.main()

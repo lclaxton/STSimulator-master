@@ -1,6 +1,6 @@
 class Enterprise:
 
-    def __init__ (self, name: str):
+    def __init__(self, name: str):
         self.name : str = name
         self.max_power_level: int = 1000
         self.power_level:int = 1000

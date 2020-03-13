@@ -51,3 +51,11 @@ class ScienceStation(BaseStation):
 
     def __repr__(self):
         return "NHLC Enterprise Science station"
+
+class EngineeringStation(BaseStation):
+
+    def __init__(self,name: str):
+        super().__init__(name=name)
+
+    def __repr__(self):
+        return "NHLC Enterprise Engineering station"

@@ -22,7 +22,7 @@ class TestStation(unittest.TestCase):
     def test_name_sad(self):
         with self.assertRaises(ValueError) as cm:
             broken_name_instance = BaseStation(1)
-        self.assertEqual(str(cm.exception), 'Base Station name should be a string')
+        self.assertEqual(str(cm.exception), 'Station name should be a string')
 
     def test_crew_members(self):
         self.assertEqual(type(self.station_instance.crew_members), list)

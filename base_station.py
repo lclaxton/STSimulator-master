@@ -24,3 +24,30 @@ class MedicalStation(BaseStation):
 
     def __init__(self,name: str):
         super().__init__(name=name)
+
+    def __repr__(self):
+        return "NHLC Enterprise Medical station"
+
+class CommandStation(BaseStation):
+
+    def __init__(self,name: str):
+        super().__init__(name=name)
+
+    def __repr__(self):
+        return "NHLC Enterprise Command station"
+
+class TacticalStation(BaseStation):
+
+    def __init__(self,name: str):
+        super().__init__(name=name)
+
+    def __repr__(self):
+        return "NHLC Enterprise Tactical station"
+
+class ScienceStation(BaseStation):
+
+    def __init__(self,name: str):
+        super().__init__(name=name)
+
+    def __repr__(self):
+        return "NHLC Enterprise Science station"

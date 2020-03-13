@@ -1,13 +1,14 @@
 import unittest
-from enterprise import Enterprise
+from base_station import BaseStation
 import io
 import contextlib
 from typing import List
 
+
 class TestStation(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.station_instance = Base_Station('base')
+        self.station_instance = BaseStation('base')
 
     def test_score(self):
         self.assertEqual(self.station_instance.score, 30)
@@ -20,7 +21,7 @@ class TestStation(unittest.TestCase):
 
     def test_name_sad(self):
         with self.assertRaises(ValueError) as cm:
-            broken_name_instance = Base_Station(1)
+            broken_name_instance = BaseStation(1)
         self.assertEqual(str(cm.exception), 'Base Station name should be a string')
 
     def test_crew_members(self):
